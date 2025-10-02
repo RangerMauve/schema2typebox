@@ -1,8 +1,8 @@
 # 1.7.7
 
-- support `Type.Record(Type.String(), <T>)` generation from objects with additional properties
+- support `Type.Record(Type.String(), <T>)` generation from empty objects using additionalProperties [src](https://github.com/xddq/schema2typebox/pull/58)
 
-# 1.7.5
+# 1.7.6
 
 - support `title` fields containing characters '- .\_' [src](https://github.com/xddq/schema2typebox/pull/53)
 
