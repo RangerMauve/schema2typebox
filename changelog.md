@@ -1,6 +1,6 @@
 # 1.7.8
 
-- Support empty `properties` field like `{"type": "object", "properties": {}}` [src](https://github.com/xddq/schema2typebox/pull/59)
+- Support empty `properties` field like `{"type": "object", "properties": {}}`, suport additionalProperties when other properties are defined [src](https://github.com/xddq/schema2typebox/pull/59)
 
 # 1.7.7
 
