@@ -37,10 +37,28 @@ describe("parser unit tests", () => {
       const result = parseObject(dummySchema);
       expect(result).toContain("Type.Unknown");
     });
+    it("returns Type.Unknown() it the object has empty properties", () => {
+      const dummySchema: ObjectSchema = {
+        type: "object",
+        properties: {},
+      };
+      const result = parseObject(dummySchema);
+      expect(result).toContain("Type.Unknown");
+    });
     describe("returns Type.Record(...) if the object has no defined properties but has additionalProperties", () => {
       const dummySchema: ObjectSchema = {
         type: "object",
         properties: undefined,
+        additionalProperties: { type: "string" },
+      };
+
+      const result = parseObject(dummySchema);
+      expect(result).toContain("Type.Record(Type.String(), Type.String())");
+    });
+    describe("returns Type.Record(...) if the object has no empty properties but has additionalProperties", () => {
+      const dummySchema: ObjectSchema = {
+        type: "object",
+        properties: {},
         additionalProperties: { type: "string" },
       };
 
