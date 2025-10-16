@@ -37,7 +37,7 @@ describe("parser unit tests", () => {
       const result = parseObject(dummySchema);
       expect(result).toContain("Type.Unknown");
     });
-    it("returns Type.Unknown() it the object has empty properties", () => {
+    it("returns Type.Unknown() if the object has empty properties", () => {
       const dummySchema: ObjectSchema = {
         type: "object",
         properties: {},
