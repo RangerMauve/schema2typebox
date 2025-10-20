@@ -189,8 +189,8 @@ export const parseObject = (schema: ObjectSchema) => {
   // output without any unnecessarily quotes attributes.
 
   if (attributes.length === 0) {
-    if (additionalProperties) {
-      const valueType = collect(schema.additionalProperties);
+    if (additionalProperties !== undefined) {
+      const valueType = collect(additionalProperties);
       return `Type.Record(Type.String(), ${valueType})`;
     }
     return schemaOptions === undefined
