@@ -78,7 +78,7 @@ describe("parser unit tests", () => {
 
       const result = parseObject(dummySchema);
       expect(result).toContain(
-        "Type.Union([Type.Object({\"a\": Type.Optional(Type.Number())}), Type.Record(Type.String(), Type.String())])"
+        'Type.Union([Type.Object({"a": Type.Optional(Type.Number())}), Type.Record(Type.String(), Type.String())])'
       );
     });
 
